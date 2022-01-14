@@ -1,5 +1,3 @@
-package helloword
-
 import Dependency
 
 class Greeter {

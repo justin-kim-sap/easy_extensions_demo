@@ -1,12 +1,16 @@
 # FlexibleSearchService demo
 
 ## Overview
-This demo shows how to call a hybris Spring bean inside a Javascript module.
+This demo shows how to use Easy Modules.
 
 ## How to execute
 
 Execute the following script in HAC (script type: javascript):
-```javascript
-flexibleSearchService = require('./flexibleSearchService/getProductTotalCount');
-flexibleSearchService.getProductTotalCount(spring);
+```groovy
+def engine = easyModuleService.getGroovyScriptEngine();
+
+def binding = new Binding();
+binding.setVariable("spring", de.hybris.platform.core.Registry.getApplicationContext());
+def flexibleSearch = engine.run('FlexibleSearchTest.groovy', binding);                 
+println flexibleSearch.getProductTotalCount();
 ```
