@@ -12,6 +12,6 @@ def engine = easyModuleService.getGroovyScriptEngine();
 
 def binding = new Binding();
 binding.setVariable("spring", de.hybris.platform.core.Registry.getApplicationContext());
-def greeter = engine.run('Greater.groovy', binding);                 
+def greeter = engine.run('HelloWorld.groovy', binding);                 
 println greeter.sayHello('Yannick');
 ```
