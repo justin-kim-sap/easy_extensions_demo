@@ -1,2 +1,5 @@
 INSERT_UPDATE Country;isocode[unique=true];name[lang=en];active[default=true]
 ;AD;"Andorra"
+
+INSERT_UPDATE UserGroup;uid[unique=true];groups(uid)
+;easyGroup;
