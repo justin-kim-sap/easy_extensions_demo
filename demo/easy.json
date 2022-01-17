@@ -1,6 +1,6 @@
 {
     "name" : "demo",
     "version" :  "0.0.0",
-    "src_path" :  "lib/src/main/groovy",
-    "test_path" :  "lib/src/test/groovy"   
+    "groovy_src_path" :  "lib/src/main/groovy",
+    "groovy_test_path" :  "lib/src/test/groovy"   
 }
