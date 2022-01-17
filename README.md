@@ -1,1 +1,1 @@
-# easy_extensions
+# easy_extensions_demo
