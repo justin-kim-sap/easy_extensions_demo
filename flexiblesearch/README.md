@@ -1,13 +1,13 @@
 # FlexibleSearchService demo
 
 ## Overview
-This demo shows how to use Easy Modules.
+This demo shows that Easy Extension gets access to Spring context.
 
 ## How to execute
 
 Execute the following script in HAC (script type: javascript):
 ```groovy
-def engine = easyModuleService.getGroovyScriptEngine();
+def engine = easyExtensionService.getGroovyScriptEngine();
 
 def binding = new Binding();
 binding.setVariable("spring", de.hybris.platform.core.Registry.getApplicationContext());
