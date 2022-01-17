@@ -1,11 +1,11 @@
 # FlexibleSearchService demo
 
 ## Overview
-This demo shows that Easy Extension gets access to Spring context.
+This demo shows that an Easy extension has access to Spring context.
 
 ## How to execute
 
-Execute the following script in HAC (script type: javascript):
+Execute the following script in HAC:
 ```groovy
 def engine = easyExtensionService.getGroovyScriptEngine();
 
