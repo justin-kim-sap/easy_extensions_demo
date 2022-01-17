@@ -1,11 +1,11 @@
 # Greeter
 
 ## Overview
-This demo shows how to use Easy Extensions.
+This demo is an Hello World Easy extension.
 
 ## How to execute
 
-Execute the following script in HAC (script type: javascript):
+Execute the following script in HAC:
 
 ```groovy
 def engine = easyExtensionService.getGroovyScriptEngine();
