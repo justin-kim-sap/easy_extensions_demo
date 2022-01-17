@@ -1,1 +1,1 @@
-# easy_modules
+# easy_extensions
