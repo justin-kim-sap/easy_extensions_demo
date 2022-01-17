@@ -1,2 +1,5 @@
-myerror.test();
-println "This is the initialisation script"
+import org.apache.log4j.Logger;
+
+LOG = Logger.getLogger("helloworld_Init");
+LOG.info("(log) Initializing...");
+println "(console) Initializing..."
