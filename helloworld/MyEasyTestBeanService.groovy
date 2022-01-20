@@ -5,7 +5,7 @@ class MyEasyTestBeanService extends DefaultEasyTestBeanService {
     def spring;
 
     public String sayHello(String name) {
-        def greet = "hello Mr " + name;
+        def greet = "hello " + name + " MyEasyTestBeanService";
         greet
     }
 }
