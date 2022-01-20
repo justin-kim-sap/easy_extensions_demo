@@ -3,7 +3,7 @@ import org.apache.log4j.Logger;
 LOG = Logger.getLogger("easy_helloworld");
 
 void registerBeans() {
-    println('Register beans');
+    LOG.info('Register beans');
 
     def reader = new org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader(spring.getBeanFactory())
     reader.beans {
@@ -13,7 +13,5 @@ void registerBeans() {
     }
 }
 
-LOG.info("(log) Initializing...");
-println "(console) Initializing..."
-
+LOG.info("Initializing...");
 registerBeans();
