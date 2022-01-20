@@ -1,8 +1,10 @@
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 
+def beanGreeterService = new org.springframework.beans.factory.support.GenericBeanDefinition();
+beanGreeterService.beanClass = GreeterService
 
-def beanGreeterService.beanClass = GreeterService
-def beanEasyTestBeanService.beanClass = MyEasyTestBeanService
+def beanEasyTestBeanService = new org.springframework.beans.factory.support.GenericBeanDefinition();
+beanEasyTestBeanService.beanClass = MyEasyTestBeanService
 
 //def beanEasyTestBeanService = BeanDefinitionBuilder.genericBeanDefinition('MyEasyTestBeanService').getBeanDefinition()
 //def bean = new org.springframework.beans.factory.support.GenericBeanDefinition('MyEasyTestBeanService');
