@@ -1,4 +1,4 @@
-import org.apache.log4j.Logger;
+import org.slf4j.LoggerFactory
 import de.hybris.platform.core.model.user.CustomerModel
 import de.hybris.platform.core.model.user.UserGroupModel
 import de.hybris.platform.servicelayer.ServicelayerBaseTest
@@ -8,7 +8,8 @@ class DataImport {
     def spring;
 
     void importCustomers() {
-        println "Import customers...";
+        LOG.info("Import customers...");
+        
 
         def modelService = spring.getBean("modelService");
 
@@ -18,6 +19,7 @@ class DataImport {
     }
 }
 
+LOG = LoggerFactory.getLogger("easy_helloworld");
 dataImport = new DataImport();
 dataImport.spring = spring;
 dataImport.importCustomers()

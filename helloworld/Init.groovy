@@ -1,6 +1,4 @@
-import org.apache.log4j.Logger;
-
-LOG = Logger.getLogger("easy_helloworld");
+import org.slf4j.LoggerFactory
 
 void registerBeans() {
     LOG.info('Register beans');
@@ -13,5 +11,6 @@ void registerBeans() {
     }
 }
 
+LOG = LoggerFactory.getLogger("easy_helloworld");
 LOG.info("Initializing...");
 registerBeans();
