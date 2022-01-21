@@ -1,4 +1,3 @@
 beans {
-    greeterService(GreeterService) {
-    }
+
 }
