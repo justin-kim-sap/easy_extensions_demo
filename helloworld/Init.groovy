@@ -14,7 +14,7 @@ void registerBeans() {
         easyTestBeanService(MyEasyTestBeanService)
     }
     */
-    reader.loadBeanDefinitions("file:./EasyBeans.groovy");
+    reader.loadBeanDefinitions("file:/Users/i303937/Documents/app/hybris1905/hybris/temp/hybris/easy_extensions/helloworld/EasyBeans.groovy");
 }
 
 LOG = LoggerFactory.getLogger("easy_helloworld");
