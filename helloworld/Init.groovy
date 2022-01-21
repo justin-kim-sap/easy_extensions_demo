@@ -14,6 +14,7 @@ void registerBeans() {
 def registerEasyServices() {
     def easyContext = [:]
     easyContext.helloWorldService = HelloWorldService
+    return easyContext
 }
 
 LOG = LoggerFactory.getLogger("easy_helloworld");
