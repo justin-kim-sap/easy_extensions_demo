@@ -5,7 +5,9 @@ class GreeterService {
     def spring;
 
     String sayHello(firstName) {
-        //def greet = new Dependency().message + firstName;
-        "hello 2" + firstName;
+        //def message = new Dependency().message + firstName;
+        def message = "hello " + firstName "from GreeterService";
+        println(message);
+        return message;
     }
 }
