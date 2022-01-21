@@ -20,5 +20,7 @@ def registerEasyBeans() {
 
 LOG = LoggerFactory.getLogger("easy_helloworld");
 LOG.info("Initializing...");
+def easyResult = [:]
 registerSpringBeans();
-registerEasyBeans();
+easyResult.easyBeans = registerEasyBeans();
+return easyResult;
