@@ -4,14 +4,17 @@ import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
 void registerBeans() {
     LOG.info('Register Spring beans');
 
+    //def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
     def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
+
+
     /*
     reader.beans {
         greeterService(GreeterService)
         easyTestBeanService(MyEasyTestBeanService)
     }
     */
-    reader.beans = beans;
+    reader.loadBeanDefinitions("file:EasyBeans.groovy");
 }
 
 LOG = LoggerFactory.getLogger("easy_helloworld");
