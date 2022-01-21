@@ -13,7 +13,7 @@ void registerBeans() {
 
 def registerEasyServices() {
     def easyContext = [:]
-    easyContext.helloWorldService = HelloWorldService
+    easyContext.helloWorldService = new HelloWorldService
     return easyContext
 }
 
