@@ -4,7 +4,7 @@ import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
 void registerBeans() {
     LOG.info('Register Spring beans');
 
-    def reader = new GroovyBeanDefinitionReader(spring.getParentBeanFactory())
+    def reader = new GroovyBeanDefinitionReader(spring.getParent().getBeanFactory())
     
     reader.beans {
         greeterService(GreeterService)
