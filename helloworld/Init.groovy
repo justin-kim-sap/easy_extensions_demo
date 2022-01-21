@@ -14,7 +14,7 @@ void registerBeans() {
         easyTestBeanService(MyEasyTestBeanService)
     }
     */
-    reader.loadBeanDefinitions("file:EasyBeans.groovy");
+    reader.loadBeanDefinitions("file:./EasyBeans.groovy");
 }
 
 LOG = LoggerFactory.getLogger("easy_helloworld");
