@@ -11,6 +11,11 @@ void registerBeans() {
     }
 }
 
+void registerEasyServices() {
+    easyContext.helloWorldService = HelloWorldService;
+}
+
 LOG = LoggerFactory.getLogger("easy_helloworld");
 LOG.info("Initializing...");
 registerBeans();
+registerEasyServices();
