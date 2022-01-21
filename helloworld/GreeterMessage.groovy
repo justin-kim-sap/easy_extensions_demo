@@ -1,3 +1,3 @@
 class GreeterMessage {
-    String message = 'Hello'
+    String message = 'Hello '
 }
