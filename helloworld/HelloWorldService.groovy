@@ -2,7 +2,7 @@ class HelloWorldService {
 
     def spring;
 
-    String sayHello(String firstName) {
+    String sayHello(firstName) {
         def message = new GreeterMessage().message + firstName + " from HelloWorldService";
         return message;
     }
