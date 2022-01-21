@@ -3,7 +3,7 @@ class GreeterService {
     def spring;
 
     String sayHello(firstName) {
-        def message = new GreeterMessage().message + firstName + " from GreeterService 4";
+        def message = new GreeterMessage().message + firstName + " from GreeterService";
         return message;
     }
 }
