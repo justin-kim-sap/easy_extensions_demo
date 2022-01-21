@@ -13,5 +13,4 @@ void registerBeans() {
 
 LOG = LoggerFactory.getLogger("easy_helloworld");
 LOG.info("Initializing...");
-println("my println test message");
 registerBeans();
