@@ -1,7 +1,7 @@
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
 
-void registerBeans() {
+registerBeans() {
     LOG.info('Register beans');
 
     def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
@@ -11,7 +11,7 @@ void registerBeans() {
     }
 }
 
-void registerEasyServices() {
+registerEasyServices() {
     def easyContext = [:]
     easyContext.helloWorldService = HelloWorldService
 }
