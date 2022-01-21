@@ -6,6 +6,6 @@ class GreeterService {
 
     String sayHello(firstName) {
         //def greet = new Dependency().message + firstName;
-        "hello " + firstName;
+        "hello 2" + firstName;
     }
 }

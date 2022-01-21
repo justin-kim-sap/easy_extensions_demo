@@ -1,4 +1,4 @@
-class FlexibleSearch {
+class FlexibleSearchDemoService {
 
     def spring;
 
@@ -17,7 +17,3 @@ class FlexibleSearch {
     }
     
 }
-
-flexibleSearch = new FlexibleSearch();
-flexibleSearch.spring = spring;
-flexibleSearch;
