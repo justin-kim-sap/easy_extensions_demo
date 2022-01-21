@@ -8,10 +8,7 @@ This demo is an Hello World Easy extension.
 Execute the following script in HAC:
 
 ```groovy
-def engine = easyExtensionService.getGroovyScriptEngine();
-
-def binding = new Binding();
-binding.setVariable("spring", de.hybris.platform.core.Registry.getApplicationContext());
-def greeterService = engine.run('HelloWorld.groovy', binding);                 
+easyExtensionService.reloadEasyBeans();
+easyBeans = easyExtensionService.getEasyBeans();
 println greeterService.sayHello('Yannick');
 ```
