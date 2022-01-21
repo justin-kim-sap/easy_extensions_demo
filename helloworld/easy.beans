@@ -1,4 +1,4 @@
 beans {
-    greeterService(GreeterService)
-    easyTestBeanService(MyEasyTestBeanService)
+    greeterService(GreeterService) {
+    }
 }
