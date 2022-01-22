@@ -56,7 +56,7 @@ tasks.named('test') {
 tasks.register('deploy') {
     doLast {
         println "Deploy..."
-        println System.properties['GRGIT_USER']
+        println System.properties['org.ajoberstar.grgit.auth.username']
 
         //GRGIT_USER=YannickRobin
         //GRGIT_PASS=myauthtoken
