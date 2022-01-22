@@ -6,8 +6,8 @@ package com.sap.cx.boosters.easy.demo
 import spock.lang.Specification
 import spock.lang.Unroll
 import groovyx.net.http.HttpResponseDecorator
-cl
-
+import groovyx.net.http.RESTClient
+import static org.apache.http.HttpStatus.SC_OK
 
 class EasyRestTest extends Specification {
     def restClient = new RESTClient( "https://localhost:9002")
