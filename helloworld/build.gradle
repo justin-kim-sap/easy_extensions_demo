@@ -1,0 +1,10 @@
+import groovyx.net.http.RESTClient
+
+tasks.register('deploy') {
+    doLast {
+        println "Deploy..."
+        def restClient = new RESTClient( "https://localhost:9002")
+        restClient.ignoreSSLIssues()
+        def response = response = restClient.get(path: '/easyrest/testGet', query:[firstname:'Yannick'])
+    }
+}
