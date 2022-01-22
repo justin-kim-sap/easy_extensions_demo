@@ -6,8 +6,7 @@ package com.sap.cx.boosters.easy.demo
 import spock.lang.Specification
 import spock.lang.Unroll
 import groovyx.net.http.HttpResponseDecorator
-import groovyx.net.http.RESTClient
-import static org.apache.http.HttpStatus.SC_OK
+cl
 
 
 class EasyRestTest extends Specification {
