@@ -56,7 +56,6 @@ tasks.named('test') {
 tasks.register('deploy') {
     doLast {
         println "Deploy..."
-        println System.properties['org.ajoberstar.grgit.auth.username'] 
 
         def repoDir = "/Users/i303937/Documents/app/hybris1905/hybris/temp/hybris/easy_extensions"
         def grGit = grgit.open(dir: repoDir)
@@ -64,11 +63,13 @@ tasks.register('deploy') {
         grGit.commit(message: 'Auto-commit with Gradle deploy')
         grGit.push(force: true)
 
-/*
-        def commerceCloudURL = 'https://localhost:9002';
-        def restClient = new groovyx.net.http.RESTClient(commerceCloudURL)
-        restClient.ignoreSSLIssues()
-        def response = restClient.get(path: '/easyrest/testGet', query:[firstname:'Yannick'])
-*/
+        println "sapCommerceDeployUrl: " + sapCommerceDeployUrl
+        //def restClient = new groovyx.net.http.RESTClient(sapCommerceDeployUrl)
+        //restClient.ignoreSSLIssues()
+        //def response = restClient.get(path: '/easyrest/testGet', query:[firstname:'Yannick'])
+        URL url = new URL(sapCommerceDeployUrl)
+        URLConnection urlConnection = url.openConnection()
+        def code = urlConnection.getResponseCode();
+         println "Deploy status: " + code
     }
 }
