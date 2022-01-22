@@ -56,7 +56,7 @@ tasks.named('test') {
 tasks.register('deploy') {
     doLast {
         println "Deploy..."
-        println System.properties['org.ajoberstar.grgit.auth.username']
+        println System.properties['org.ajoberstar.grgit.auth.username'] 
 
         def repoDir = "/Users/i303937/Documents/app/hybris1905/hybris/temp/hybris/easy_extensions"
         def grGit = grgit.open(dir: repoDir)
