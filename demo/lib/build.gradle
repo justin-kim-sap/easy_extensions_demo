@@ -57,17 +57,15 @@ tasks.register('deploy') {
     doLast {
         println "Deploy..."
 
-        def repoDir = "/Users/i303937/Documents/app/hybris1905/hybris/temp/hybris/easy_extensions"
-        def grGit = grgit.open(dir: repoDir)
+/*
+        def grGit = grgit.open(dir: easyRepoDir)
         grGit.add(patterns: ['.'], update: true)
         grGit.commit(message: 'Auto-commit with Gradle deploy')
         grGit.push(force: true)
-
-        println "sapCommerceDeployUrl: " + sapCommerceDeployUrl
-        //def restClient = new groovyx.net.http.RESTClient(sapCommerceDeployUrl)
-        //restClient.ignoreSSLIssues()
-        //def response = restClient.get(path: '/easyrest/testGet', query:[firstname:'Yannick'])
-        URL url = new URL(sapCommerceDeployUrl)
+*/
+        println "easyRepoDir: " + easyRepoDir
+        println "easyDeployUrl: " + easyDeployUrl
+        URL url = new URL(easyDeployUrl)
         URLConnection urlConnection = url.openConnection()
         def code = urlConnection.getResponseCode();
          println "Deploy status: " + code
