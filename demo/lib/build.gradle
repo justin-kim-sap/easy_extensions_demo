@@ -57,6 +57,9 @@ tasks.register('deploy') {
     doLast {
         println "Deploy..."
 
+        //GRGIT_USER=YannickRobin
+        //GRGIT_PASS=myauthtoken
+
         def repoDir = "/Users/i303937/Documents/app/hybris1905/hybris/temp/hybris/easy_extensions"
         def grGit = grgit.open(dir: repoDir)
         grGit.add(patterns: ['.'], update: true)
