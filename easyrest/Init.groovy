@@ -6,7 +6,6 @@ void registerBeans() {
 
     def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
     reader.beans {
-        }
     }
 }
 
