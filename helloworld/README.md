@@ -1,7 +1,7 @@
 # Greeter
 
 ## Overview
-This demo is an Hello World Easy extension.
+This demo is an _Hello World_ Easy extension.
 
 ## How to execute
 
