@@ -1,0 +1,5 @@
+{
+    "name" : "easyrest",
+    "version" :  "0.0.0",
+    "init" : "Init.groovy"    
+}

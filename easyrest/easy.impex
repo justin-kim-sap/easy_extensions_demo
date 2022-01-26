@@ -1,0 +1,33 @@
+INSERT_UPDATE EasyRest  ;Name[unique=true];Path[unique=true];SSL;Method(code);AuthenticationMethod(code);Format(code);ContentType(code);Script;SwaggerSummary;SwaggerDescription;SwaggerParameters[allownull=true];SwaggerRequestSchema[allownull=true];SwaggerResponses[allownull=true]
+                        ;testGET2;testGet2;true;GET;NONE;NONE;TEXT;"log = org.slf4j.LoggerFactory.getLogger('easyrest');
+log.info('parameters :' + parameters.toString());
+
+if (parameters.firstname == null)
+{
+   response.'responseCode' = 500
+   response.'body' = 'firstname parameter missing'
+}
+else {
+   firstname = parameters.firstname
+   response.'body' = 'hello ' + firstname
+}
+
+return response";testGET summary;testGET description;"[
+    {
+        ""in"":""query"",
+        ""name"":""firstname"",
+        ""description"":""Your firstname"",
+        ""required"":true,
+        ""type"":""string""
+    }
+]";;"{
+""200"":
+    {
+        ""description"" : ""Hello message"",
+        ""content"" : {
+            ""text/plain"" : {
+                ""schema"" : {
+                    ""type"" : ""string""
+                }
+    }
+}"
