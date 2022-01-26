@@ -9,6 +9,5 @@ Execute the following script in HAC:
 
 ```groovy
 easyExtensionService.reloadEasyBeans();
-easyBeans = easyExtensionService.getEasyBeans();
 println greeterService.sayHello('Yannick');
 ```
