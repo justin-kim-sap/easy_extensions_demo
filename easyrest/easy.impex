@@ -3,3 +3,7 @@ INSERT_UPDATE EasyRest  ;Name[unique=true];Path[unique=true];SSL;Method(code);Au
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
+                        ;easyExtensionDemo;easyExtensionDemo;true;GET;NONE;NONE;TEXT;"
+response.'responseCode' = 200;
+response.'body' = greeterService.sayHello('Yannick');
+return response"
