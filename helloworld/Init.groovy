@@ -7,8 +7,10 @@ void registerBeans() {
     def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
     
     reader.beans {
-        greeterService(GreeterService)
-        easyTestBeanService(MyEasyTestBeanService)
+        greeterService(GreeterService) {
+            spring = spring
+        }
+        easyTestBeanService(MyEasyTestBeanService) 
     }
  }
 
