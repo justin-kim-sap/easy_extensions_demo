@@ -14,7 +14,7 @@ println greeterService.sayHello('Yannick');
 ## How to execute for existing Spring beans
 Execute the following script in HAC:
 
-'''groovy
+```groovy
 def engine = easyExtensionService.getGroovyScriptEngine();
 def applicationContext = de.hybris.platform.core.Registry.getApplicationContext();
   
