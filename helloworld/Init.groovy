@@ -10,7 +10,10 @@ void registerBeans() {
         greeterService(GreeterService) {
             spring = spring
         }
-        easyTestBeanService(MyEasyTestBeanService) 
+        easyTestBeanService(MyEasyTestBeanService)
+        priceService(EasyPriceService) {
+            spring = spring
+        }
     }
  }
 

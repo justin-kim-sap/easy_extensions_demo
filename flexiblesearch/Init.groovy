@@ -10,9 +10,6 @@ void registerBeans() {
         flexibleSearchDemoService(FlexibleSearchDemoService) {
             spring = spring
         }
-        priceService(EasyPriceService) {
-            spring = spring
-        }
     }
 }
 
