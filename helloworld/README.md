@@ -21,3 +21,13 @@ easyExtensionService.reloadEasyBeans();
 println greeterService.sayHello("Yannick");
 println greeterService.sayHelloFromSpring("Yannick");
 ```
+
+## Demo price service overriding
+```groovy
+easyExtensionService.setApplicationContext(spring);
+easyExtensionService.reloadEasyBeans();
+
+catVersion = catalogVersionService.getCatalogVersion("Default", "Staged");
+product = productService.getProductForCode(catVersion, "Product1");
+println priceService.getPriceInformationsForProduct(product);
+```
