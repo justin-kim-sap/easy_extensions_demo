@@ -3,8 +3,15 @@ class GreeterService {
     def spring;
 
     String sayHello(firstName) {
-        //def message = new GreeterMessage().message + firstName + " from GreeterService";
+        def greeterMessage = new GreeterMessage();
+        greeterMessage.configurationService = spring.getBean("configurationService");
+        def message = greeterMessage.getMessage() + " " + firstName + " from GreeterService";
+        return message;
+    }
+
+    String sayHelloFromSpring(firstName) {
         def message = spring.getBean("easyTestBeanService").sayHello("Yannick");
         return message;
     }
+
 }

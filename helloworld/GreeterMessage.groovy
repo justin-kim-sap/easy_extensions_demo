@@ -1,3 +1,9 @@
 class GreeterMessage {
-    String message = 'Hello '
+    def configurationService;
+    
+    String getMessage()
+    {
+        return configurationService.getConfiguration().getString("easy.helloworld.message");
+    }
+    
 }

@@ -11,16 +11,13 @@ easyExtensionService.reloadEasyBeans();
 println greeterService.sayHello('Yannick');
 ```
 
-## How to execute for existing Spring beans
+## How to override existing Spring beans
 Execute the following script in HAC:
 
 ```groovy
-def engine = easyExtensionService.getGroovyScriptEngine();
-def applicationContext = de.hybris.platform.core.Registry.getApplicationContext();
-  
-def binding = new Binding();
-binding.setVariable("spring", applicationContext);
-engine.run('Init.groovy', binding);
+easyExtensionService.setApplicationContext(spring);
+easyExtensionService.reloadEasyBeans();
 
-println easyTestBeanService.sayHello("Yannick");
+println greeterService.sayHello("Yannick");
+println greeterService.sayHelloFromSpring("Yannick");
 ```
