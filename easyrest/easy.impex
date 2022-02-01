@@ -1,9 +1,31 @@
 INSERT_UPDATE EasyRest  ;Name[unique=true];Path[unique=true];SSL;Method(code);AuthenticationMethod(code);Format(code);ContentType(code);Script;SwaggerSummary;SwaggerDescription;SwaggerParameters[allownull=true];SwaggerRequestSchema[allownull=true];SwaggerResponses[allownull=true]
-                        ;easyDeploy;easy/deploy;false;GET;NONE;NONE;TEXT;"easyExtensionService.setApplicationContext(spring);
-easyExtensionService.reloadEasyBeans();
+                        ;easyDeploy;easy/deploy;false;GET;NONE;NONE;TEXT;"easyExtensionService.reloadEasyBeans();
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
+                        ;easyExtensionHelloWorld;easyExtensionHelloWorld;true;GET;NONE;NONE;TEXT;"response.'responseCode' = 200;
+response.'body' = greeterService.sayHelloFromSpring('Yannick');
+return response";;;"[
+    {
+        ""in"":""query"",
+        ""name"":""firstname"",
+        ""description"":""Your firstname"",
+        ""required"":true,
+        ""type"":""string""
+    }
+]";;"{
+""200"":
+    {
+        ""description"" : ""Hello message"",
+        ""content"" : {
+            ""text/plain"" : {
+                ""schema"" : {
+                    ""type"" : ""string""
+                }
+            }
+        }
+    }
+}"
                         ;getPrice;getPrice;true;GET;NONE;NONE;JSON;"log = org.slf4j.LoggerFactory.getLogger('easyrest');
 
 catVersion = catalogVersionService.getCatalogVersion('Default', 'Staged');
