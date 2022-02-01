@@ -15,10 +15,3 @@ reader.beans {
         spring = spring
     }
 }
-
-/*
-beans {
-    greeterService(GreeterService) {
-    }
-}
-*/
