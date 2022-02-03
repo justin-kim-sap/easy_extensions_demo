@@ -19,9 +19,9 @@ class EasyPriceService extends DefaultPriceService {
             prices.eachWithIndex{price,index->
                 def priceValue = price.getPrice();
                 def currency = priceValue.getCurrencyIso();
-                if (currency.equals('EUR'))
+                if (currency.equals('USD'))
                 {
-                    def priceValueCurrencyTo = convert(priceValue, 'EUR', 'USD');
+                    def priceValueCurrencyTo = convert(priceValue, 'USD', 'EUR');
                     def priceCurrencyTo = new PriceInformation(price.getQualifiers(), priceValueCurrencyTo);
                     prices[index] = priceCurrencyTo;
                 }
