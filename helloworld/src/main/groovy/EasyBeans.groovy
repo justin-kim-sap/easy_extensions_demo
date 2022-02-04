@@ -4,9 +4,9 @@ import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
 LOG = LoggerFactory.getLogger("easy_helloworld");
 LOG.debug('Register Spring beans');
 
+/* 
 def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
 
-/*    
 reader.beans {
     greeterService(GreeterService) {
         spring = spring
