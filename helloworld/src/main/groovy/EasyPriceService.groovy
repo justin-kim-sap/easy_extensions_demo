@@ -25,6 +25,12 @@ class EasyPriceService extends DefaultPriceService {
                     def priceCurrencyTo = new PriceInformation(price.getQualifiers(), priceValueCurrencyTo);
                     prices[index] = priceCurrencyTo;
                 }
+                else if (currency.equals('EUR'))
+                {
+                    def priceValueCurrencyTo = convert(priceValue, 'EUR', 'USD');
+                    def priceCurrencyTo = new PriceInformation(price.getQualifiers(), priceValueCurrencyTo);
+                    prices[index] = priceCurrencyTo;
+                }
             }
         }
         return prices;
