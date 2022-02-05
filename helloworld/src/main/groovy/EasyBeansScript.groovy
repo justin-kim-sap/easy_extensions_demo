@@ -1,7 +1,1 @@
-abstract class RegisterEasyBeansScript extends Script {
-
-    void registerBeans() {
-
-    }
-
-}
+println "test"
