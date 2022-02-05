@@ -1,5 +1,5 @@
 beans {
-    greeterService(GreeterService) {
+ greeterService(GreeterService) {
         spring = spring
     }
     easyTestBeanService(MyEasyTestBeanService)
