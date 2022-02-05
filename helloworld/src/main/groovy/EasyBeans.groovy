@@ -14,4 +14,4 @@ reader.importBeans("beans {" +
     "priceService(EasyPriceService) {" + 
     "    spring = spring" + 
     "}" + 
-}");
+"}");
