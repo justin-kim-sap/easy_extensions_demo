@@ -4,7 +4,7 @@ import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
 LOG = LoggerFactory.getLogger("easy_helloworld");
 LOG.debug('Register Spring beans');
 
-abstract class EasyBeans extends Script {
+abstract class EasyBeansScript extends Script {
 
     void registerBeans() {
         def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
