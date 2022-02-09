@@ -4,7 +4,7 @@ response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
                         ;easyExtensionHelloWorld;easyExtensionHelloWorld;true;GET;NONE;NONE;TEXT;"response.'responseCode' = 200;
-response.'body' = greeterService.sayHelloFromSpring('Yannick');
+response.'body' = greeterService.sayHello(parameters.firstname);
 return response";;;"[
     {
         ""in"":""query"",

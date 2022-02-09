@@ -5,7 +5,7 @@ class GreeterService {
     String sayHello(firstName) {
         def greeterMessage = new GreeterMessage();
         greeterMessage.configurationService = spring.getBean("configurationService");
-        def message = greeterMessage.getMessage() + " " + firstName + " from GreeterService";
+        def message = greeterMessage.getMessage() + " " + firstName + " from Easy";
         return message;
     }
 
