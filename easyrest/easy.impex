@@ -1,9 +1,13 @@
 INSERT_UPDATE EasyRest  ;Name[unique=true];Path[unique=true];SSL;Method(code);AuthenticationMethod(code);Format(code);ContentType(code);Script;SwaggerSummary;SwaggerDescription;SwaggerParameters[allownull=true];SwaggerRequestSchema[allownull=true];SwaggerResponses[allownull=true]
-                        ;easyDeploy;easy/deploy;false;GET;NONE;NONE;TEXT;"easyExtensionService.reloadEasyBeans();
+                        ;easyDeploy;easy/deploy;false;GET;NONE;NONE;TEXT;"easyExtensionService.reloadEasyExtensions();
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
-                        ;easyExtensionHelloWorld;easyExtensionHelloWorld;true;GET;NONE;NONE;TEXT;"response.'responseCode' = 200;
+                        ;easyDeploy;easy/reload;false;GET;NONE;NONE;TEXT;"easyExtensionService.reloadEasyBeans();
+response.'responseCode' = 200;
+response.'body' = 'OK';
+return response"
+                        ;easyHelloWorld;easyHelloWorld;true;GET;NONE;NONE;TEXT;"response.'responseCode' = 200;
 response.'body' = greeterService.sayHello(parameters.firstname);
 return response";;;"[
     {
