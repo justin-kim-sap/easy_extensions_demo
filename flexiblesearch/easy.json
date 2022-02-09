@@ -1,5 +1,5 @@
 {
     "name" : "flexiblesearch",
-    "version" :  "0.0.0",
-    "init" : "Init.groovy"    
+    "version" :  "0.0.1",
+    "init" : ""    
 }
