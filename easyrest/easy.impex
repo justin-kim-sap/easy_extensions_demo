@@ -3,7 +3,7 @@ INSERT_UPDATE EasyRest  ;Name[unique=true];Path[unique=true];SSL;Method(code);Au
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
-                        ;easyDeploy;easy/reload;false;GET;NONE;NONE;TEXT;"easyExtensionService.reloadEasyBeans();
+                        ;easyReload;easy/reload;false;GET;NONE;NONE;TEXT;"easyExtensionService.reloadEasyBeans();
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
