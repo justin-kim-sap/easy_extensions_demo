@@ -1,1 +1,1 @@
-println "test"
+println "Init helloworld"

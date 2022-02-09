@@ -9,9 +9,4 @@ class GreeterService {
         return message;
     }
 
-    String sayHelloFromSpring(firstName) {
-        def message = spring.getBean("easyTestBeanService").sayHello("Yannick");
-        return message;
-    }
-
 }
