@@ -56,14 +56,14 @@ tasks.named('test') {
 tasks.register('deploy') {
     doLast {
         println "Deploy..."
+        println "easyRepoDir: " + easyRepoDir
+        println "easyDeployUrl: " + easyDeployUrl
 
         def grGit = grgit.open(dir: easyRepoDir)
         grGit.add(patterns: ['.'], update: true)
         grGit.commit(message: 'Auto-commit with Gradle deploy')
         grGit.push(force: true)
-
-        println "easyRepoDir: " + easyRepoDir
-        println "easyDeployUrl: " + easyDeployUrl
+      
         URL url = new URL(easyDeployUrl)
         URLConnection urlConnection = url.openConnection()
         def code = urlConnection.getResponseCode();
