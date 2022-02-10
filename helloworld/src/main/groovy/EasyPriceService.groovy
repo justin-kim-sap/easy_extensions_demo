@@ -9,7 +9,7 @@ class EasyPriceService extends DefaultPriceService {
 
     def LOG = org.slf4j.LoggerFactory.getLogger("EasyPriceService");
     def spring;
-    def enabled = false;
+    def enabled = true;
 
     public List<PriceInformation> getPriceInformationsForProduct(ProductModel product) {     
         def prices = super.getPriceInformationsForProduct(product);
