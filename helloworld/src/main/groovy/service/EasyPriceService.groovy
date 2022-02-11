@@ -1,3 +1,5 @@
+package service;
+
 import de.hybris.platform.product.impl.DefaultPriceService;
 import de.hybris.platform.core.model.product.ProductModel;
 import java.util.List;

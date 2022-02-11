@@ -7,10 +7,10 @@ LOG.debug('Register Spring beans');
 def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
 
 reader.beans {
-    greeterService(GreeterService) {
+    greeterService(service.GreeterService) {
         spring = spring
     }
-    priceService(EasyPriceService) {
+    priceService(service.EasyPriceService) {
         spring = spring
     }
 }
