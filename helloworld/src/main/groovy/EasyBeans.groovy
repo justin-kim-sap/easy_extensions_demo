@@ -8,10 +8,10 @@ def reader = new GroovyBeanDefinitionReader(spring.getBeanFactory())
 
 reader.beans {
     greeterService(service.GreeterService) {
-        spring = spring
+        configurationService = spring.getBean("configurationService")
     }
-    greeterController(service.GreeterController) {
-        spring = spring
+    greeterController(controller.GreeterController) {
+        greeterService = greeterService
     }
     priceService(service.EasyPriceService) {
         spring = spring

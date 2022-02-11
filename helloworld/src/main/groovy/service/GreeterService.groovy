@@ -2,13 +2,16 @@ package service;
 
 class GreeterService {
 
-    def spring;
+    def configurationService;
 
     String sayHello(firstName) {
-        def greeterMessage = new GreeterMessage();
-        greeterMessage.configurationService = spring.getBean("configurationService");
-        def message =  "${greeterMessage.getMessage()} ${firstName}. This is Easy.";
+        def message =  "${getMessage()} ${firstName}. This is Easy.";
         return message;
+    }
+
+    String getMessage()
+    {
+        return configurationService.getConfiguration().getString("easy.helloworld.message");
     }
 
 }
