@@ -7,7 +7,7 @@ return response"
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
-                        ;easyHelloWorld;easyHelloWorld;true;GET;NONE;NONE;TEXT;greeterService;;;;"[
+                        ;easyHelloWorld;easyHelloWorld;true;GET;NONE;NONE;TEXT;greeterController;;;;"[
     {
         ""in"":""query"",
         ""name"":""firstname"",
