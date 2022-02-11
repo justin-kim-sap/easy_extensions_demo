@@ -10,6 +10,9 @@ reader.beans {
     greeterService(service.GreeterService) {
         spring = spring
     }
+    greeterController(service.GreeterController) {
+        spring = spring
+    }
     priceService(service.EasyPriceService) {
         spring = spring
     }
