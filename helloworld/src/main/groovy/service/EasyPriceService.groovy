@@ -10,7 +10,6 @@ import org.apache.commons.collections.CollectionUtils;
 class EasyPriceService extends DefaultPriceService {
 
     def LOG = org.slf4j.LoggerFactory.getLogger("EasyPriceService");
-    def spring;
     def enabled = true;
 
     public List<PriceInformation> getPriceInformationsForProduct(ProductModel product) {     
