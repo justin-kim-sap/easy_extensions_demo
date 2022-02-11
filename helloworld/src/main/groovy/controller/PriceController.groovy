@@ -1,12 +1,12 @@
 package controller;
 
-import service.EasyPriceService;
+import de.hybris.platform.product.impl.PriceService;
 import com.sap.cx.boosters.easyrest.controller.EasyServiceController;
 import java.util.Map;
 
 class PriceController implements EasyServiceController {
 
-    def priceService;
+    PriceService priceService;
     def catalogVersionService;
     def productService;
 

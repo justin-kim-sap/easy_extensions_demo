@@ -15,7 +15,7 @@ reader.beans {
     }
     priceService(service.EasyPriceService) {
     }
-    priceController(controller.GreeterController) {
+    priceController(controller.PriceController) {
         priceService = priceService
         catalogVersionService = spring.getBean("catalogVersionService")
         productService = spring.getBean("productService")
