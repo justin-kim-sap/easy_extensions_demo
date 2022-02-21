@@ -1,3 +1,5 @@
+package service;
+
 import de.hybris.platform.product.impl.DefaultPriceService;
 import de.hybris.platform.core.model.product.ProductModel;
 import java.util.List;
@@ -8,10 +10,13 @@ import org.apache.commons.collections.CollectionUtils;
 class EasyPriceService extends DefaultPriceService {
 
     def LOG = org.slf4j.LoggerFactory.getLogger("EasyPriceService");
-    def spring;
+    def enabled = true;
 
     public List<PriceInformation> getPriceInformationsForProduct(ProductModel product) {     
         def prices = super.getPriceInformationsForProduct(product);
+        if (!enabled)
+            return prices;
+
         LOG.info("Price before " + prices);
 
         if (CollectionUtils.isNotEmpty(prices))
@@ -39,11 +44,11 @@ class EasyPriceService extends DefaultPriceService {
     def convert(priceValue, currencyFrom, currencyTo)
     {
         def priceFrom = Math.round(priceValue.getValue()*100)/100;
-        def priceTo = priceFrom * getRate(currencyFrom, currencyTo);
+        def priceTo = priceFrom * getRateFromExternalExchangeService(currencyFrom, currencyTo);
         return new PriceValue(currencyTo, priceTo, true);
     }
 
-    BigDecimal getRate(currencyFrom, currencyTo) {
+    BigDecimal getRateFromExternalExchangeService(currencyFrom, currencyTo) {
         def restTemplate = new org.springframework.web.client.RestTemplate()
         restTemplate.execute("https://api.exchangerate.host/latest?base=" + currencyFrom + "&symbols=" + currencyTo, org.springframework.http.HttpMethod.GET, {}, {
             def parser = new groovy.json.JsonSlurper()
