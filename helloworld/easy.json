@@ -1,6 +1,6 @@
 {
     "name" : "helloworld",
-    "version" :  "0.0.1",
+    "version" :  "0.0.0",
     "groovy_main_path" :  "src/main/groovy",
     "groovy_test_path" :  "src/test/groovy",    
     "init" : "Init.groovy"
