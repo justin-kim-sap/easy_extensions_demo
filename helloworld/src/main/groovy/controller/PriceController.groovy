@@ -1,10 +1,10 @@
 package controller;
 
-import com.sap.cx.boosters.easyrest.controller.EasyServiceController;
+import com.sap.cx.boosters.easyrest.controller.EasyRestServiceController;
 import java.util.Map;
 import org.slf4j.LoggerFactory;
 
-class PriceController implements EasyServiceController {
+class PriceController implements EasyRestServiceController {
 
     def priceService;
     def catalogVersionService;

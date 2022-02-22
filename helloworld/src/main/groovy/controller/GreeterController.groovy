@@ -1,10 +1,10 @@
 package controller;
 
-import com.sap.cx.boosters.easyrest.controller.EasyServiceController;
+import com.sap.cx.boosters.easyrest.controller.EasyRestServiceController;
 import service.GreeterService;
 import java.util.Map;
 
-class GreeterController implements EasyServiceController {
+class GreeterController implements EasyRestServiceController {
 
     def greeterService;
 
