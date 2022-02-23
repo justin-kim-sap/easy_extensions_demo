@@ -2,15 +2,15 @@ INSERT_UPDATE EasyRestGroup;Name[unique=true]
                            ;Easy
 
 INSERT_UPDATE EasyRest  ;Name[unique=true];easyRestGroup(name);Path[unique=true];SSL;Method(code);AuthenticationMethod(code);Format(code);ContentType(code);SpringBean;Script;SwaggerSummary;SwaggerDescription;SwaggerParameters[allownull=true];SwaggerRequestSchema[allownull=true];SwaggerResponses[allownull=true]
-                        ;easyDeploy;easy/deploy;false;GET;NONE;NONE;TEXT;;"easyExtensionService.reloadEasyExtensions();
+                        ;easyDeploy;Easy;easy/deploy;false;GET;NONE;NONE;TEXT;;"easyExtensionService.reloadEasyExtensions();
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
-                        ;easyReload;easy/reload;false;GET;NONE;NONE;TEXT;;"easyExtensionService.reloadEasyBeans();
+                        ;easyReload;Easy;easy/reload;false;GET;NONE;NONE;TEXT;;"easyExtensionService.reloadEasyBeans();
 response.'responseCode' = 200;
 response.'body' = 'OK';
 return response"
-                        ;easyHelloWorld;easyHelloWorld;true;GET;NONE;NONE;TEXT;greeterController;;;;"[
+                        ;easyHelloWorld;Easy;easyHelloWorld;true;GET;NONE;NONE;TEXT;greeterController;;;;"[
     {
         ""in"":""query"",
         ""name"":""firstname"",
@@ -31,7 +31,7 @@ return response"
         }
     }
 }"
-                        ;getPrice;getPrice;true;GET;NONE;NONE;JSON;priceController;;;;"[
+                        ;getPrice;Easy;getPrice;true;GET;NONE;NONE;JSON;priceController;;;;"[
     {
         ""in"":""query"",
         ""name"":""code"",
